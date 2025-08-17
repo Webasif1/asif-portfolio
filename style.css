@@ -703,6 +703,101 @@ footer h1{
 }
 
 
+/*** menu icon  */
+.menu-icon{
+  font-size: 35px;
+  cursor: pointer;
+  display: none;
+}
+
+/**** Sidebar  */
+.sidebar{
+  position: fixed;
+  top: 0;
+  bottom: 70%;
+  right: 0;
+  width: 0%;
+  background-color: #000000b8;
+  backdrop-filter: blur(10px);
+  z-index: 999;
+  box-shadow: 0 0 20px rgba(211, 211, 211, 0.450);
+  border-bottom-left-radius: 100%;
+  opacity: 0;
+}
+.close-icon{
+  font-size: 50px;
+  color: lightgray;
+  padding-left: 10px;
+  cursor: pointer;
+}
+.sidebar ul{
+  padding-left: 20px;
+}
+.sidebar ul li{
+  list-style: none;
+  margin-bottom: 30px;
+}
+.sidebar ul li a{
+  color: lightgray;
+  font-size: 30px;
+  font-weight: 700;
+  text-decoration: none;
+  text-shadow: 0 0 15px rgba(128, 128, 128, 0.256);
+}
+.sidebar .social-icon{
+  padding-left: 20px;
+  margin-top: 60px;
+  text-wrap: nowrap;
+}
+.sidebar .social-icon a{
+  font-size: 35px;
+  padding: 5px;
+  cursor: pointer;
+  color: lightgray;
+}
+
+/**** Open sidebar animation  */
+.sidebar.open-sidebar{
+  animation: openSidebarAnimation 1.5s forwards;
+  -webkit-animation: openSidebarAnimation 1.5s forwards;
+}
+@keyframes openSidebarAnimation{
+  to{
+    width: 80%;
+    bottom: 0;
+    opacity: 1;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+}
+
+/*** Closes sidebar  */
+.sidebar.close-sidebar{
+  animation: closeSideBarAnimation 1.5s forwards;
+  -webkit-animation: closeSideBarAnimation 1.5s forwards;
+}
+
+@keyframes closeSideBarAnimation{
+  from{
+    width: 80%;
+    bottom: 0;
+    opacity: 1;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+  }
+  to{
+    width: 0%;
+    bottom: 70%;
+    opacity: 0;
+    border-bottom-left-radius: 50%;
+  }
+}
 
 
 /*** Gradient  */
@@ -987,7 +1082,12 @@ footer h1{
     bottom: 40%;
   }
 
+  .menu-icon{
+    display: inline;
+  }
+
 }
+
 
 @media screen and (max-width: 450px){
   .blackhole-box video{

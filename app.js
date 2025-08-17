@@ -17,3 +17,19 @@ videoList.forEach( (video) =>{
     hoverSigh.classList.remove('active');
   })
 })
+
+
+// sidebar menu //
+const sideBar = document.querySelector('.sidebar ');
+const menu = document.querySelector('.menu-icon ');
+const close = document.querySelector('.close-icon ');
+
+menu.addEventListener('click', () => {
+  sideBar.classList.remove('close-sidebar');
+  sideBar.classList.add('open-sidebar')
+})
+
+close.addEventListener('click', () => {
+  sideBar.classList.remove('open-sidebar');
+  sideBar.classList.add('close-sidebar');
+})
