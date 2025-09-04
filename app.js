@@ -33,3 +33,47 @@ close.addEventListener('click', () => {
   sideBar.classList.remove('open-sidebar');
   sideBar.classList.add('close-sidebar');
 })
+
+
+// ***Scroll
+
+const section1 = document.querySelector('.info-section');
+const btnScrollTo = document.querySelector('.scroll-down');
+
+
+btnScrollTo.addEventListener('click', (e)=> {
+
+  // const s1coord = section1.getBoundingClientRect();
+  // console.log(s1coord);
+  // window.scrollTo({
+  //   left: s1coord.left + window.pageXOffset,
+  //   top: s1coord.top + window.pageYOffset,
+  //   behavior: 'smooth',
+  // });
+
+  //**oneLine*/
+  section1.scrollIntoView({behavior: "smooth"});
+});
+
+//*** Sticky Navigation */
+const header = document.querySelector('.header');
+const hero = document.querySelector('.hero');
+const headerHeight = header.getBoundingClientRect().height;
+
+const stickyNav =function(entries) {
+  const [entry] = entries;
+
+
+  if(entry.intersectionRatio === 0)
+    header.classList.add("sticky__nav");
+  else
+  header.classList.remove("sticky__nav");
+}
+
+const headerObserver = new IntersectionObserver(
+  stickyNav,{
+    root: null,
+    threshold: 0,
+    rootMargin: `-${headerHeight}px`
+  });
+  headerObserver.observe(hero);

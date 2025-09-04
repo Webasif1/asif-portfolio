@@ -1,6 +1,9 @@
-body{
+*{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+body{
   font-family: Arial, Helvetica, sans-serif;
   color: lightgray;
 }
@@ -27,6 +30,7 @@ html{
   width: 100%;
   object-fit: cover; */
 }
+/* *** Header section nav bar css Start   */
 header{
   display: flex;
   position: absolute;
@@ -117,6 +121,8 @@ header ul li a{
   width: 100%;
   margin-top: -23.5%;
 }
+/* *** Header section nav bar css End   */
+/* *** Hero section css Start   */
 .hero{
   position: relative;
   display: flex;
@@ -238,7 +244,8 @@ margin-bottom: 40px;
     opacity: 0;
   }
 }
-
+/* *** Hero section css End   */
+/* *** Info section css Start   */
 
 .info-section{
   display: flex;
@@ -364,9 +371,8 @@ margin-bottom: 40px;
 .card:nth-child(2) h1{
   bottom: 22%;
 }
-
-
-
+/* *** Info section css End   */
+/* *** Project section css Start   */
 
 .my-projects{
   display: flex;
@@ -468,6 +474,11 @@ margin-bottom: 40px;
   box-shadow: 0 0 15px #727fde86;
   opacity: 0.7;
 }
+
+.project-info button a{
+  color: white;
+  text-decoration: none;
+}
 .hover-sign{
   display: flex;
   align-items: center;
@@ -504,8 +515,8 @@ margin-bottom: 40px;
 .hover-sign.active{
   display: none;
 }
-
-
+/* *** Project section css End   */
+/* *** Skill section css Start   */
 
 /* skill */
 .sKill-section{
@@ -609,6 +620,8 @@ margin-bottom: 40px;
   filter: grayscale(0);
   -webkit-filter: grayscale(0);
 }
+/* *** Skill section css End   */
+/* *** Contact section css Start   */
 
 /* contact  */
 .contact-section{
@@ -682,7 +695,8 @@ margin-bottom: 40px;
   box-shadow: 0 0 15px #727fde86;
   opacity: 0.7;
 }
-
+/* *** Contact section css End   */
+/* *** Footer section css Start   */
 /* footer  */
 footer{
   display: flex;
@@ -700,6 +714,13 @@ footer{
 }
 footer h1{
   font-size: 30px;
+}
+/* *** Footer section css End   */
+
+/*** Sticky nav bar  */
+.sticky__nav{
+  position: fixed;
+  background-color: #6503c29a;
 }
 
 
